@@ -1,4 +1,4 @@
-Create an app to list cocktails. 
+Create a web app to list cocktails.
 
 The coctail API: https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita
 
