@@ -6,4 +6,6 @@ TASK: fork this repo and create an web app that displays a list of nicely format
 
 BONUS 1: provide the ability to search the api
 
-BONUS 2: page results, with results per page set via an attribute of the shortcode
+BONUS 2: page results
+
+BONUS 3: allow switching between languages
