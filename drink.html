@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>VRAT's Drinks</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="./assets/js/drink.js"></script>
+        <link type="text/css" rel="stylesheet" href="./assets/css/sass.css">
+    </head>
+    <body>
+        <div id="content">
+            <div id="header"><h1></h1></div>
+            <div id="details" class="drink">
+                <div id="image"><img src=""/></div>
+                <div id="text">
+                    <div>
+                        <label>Category: </label>
+                        <span id="category"></span>
+                    </div>
+                    <div>
+                        <label>Alcohol Content: </label>
+                        <span id="alcholic"></span>
+                    </div>
+                    <div>
+                        <label>Glass: </label>
+                        <span id="glass"></span>
+                    </div>
+                    <div>
+                        <label>Ingredients: </label>
+                        <ul id="ingredients"></ul>
+                    </div>
+                    <div id="instr">
+                        <div>
+                            <label>Instructions: </label>
+
+                            <!-- right now there are 5/7 language entries for the instructions data, but this might grow or change,
+                            so the options here will be populated dynamically based on what we retrieve from the API -->
+                            <select id="langs"></select>
+                        </div>
+                        <div id="instructions"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="spinner"><img src="./assets/icons/spinner.svg" /></div>
+            <div id="nav">
+                <a id="home" href="./index.html">Home</a>
+                |
+                <a id="back" href="javascript:history.back()">Back</a>
+            </div>
+        </div>
+    </body>
+</html>

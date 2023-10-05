@@ -1,0 +1,159 @@
+$bg-primary: #000;
+$bg-secondary: #333;
+$font-primary: #FFF;
+$font-secondary: #FF7D7D;
+
+body {
+    background-color: $bg-primary;
+    color: $font-primary;
+}
+a {
+    color: $font-secondary;
+    text-underline-offset: 0.25rem;
+}
+h1, h2 {
+    font-style: italic;
+}
+.hidden {
+    display: none;
+}
+#content {
+    max-width: 40rem;
+    min-height: 100%;
+    margin: auto;
+    border: 1px dashed $font-primary;
+    text-align: center;
+
+    > div {
+        padding: 1.5rem 0;
+    }
+    #search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0;
+        background-color: $bg-secondary;
+
+        #search-text {
+            outline: 0;
+            background-color: unset;
+            border: unset;
+            border-bottom: 2px solid $font-primary;
+            color: $font-primary;
+        }
+        img {
+            width: 1.25rem;
+            height: 1.25rem;
+            cursor: pointer;
+        }
+    }
+    #results {
+        .drink {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid $bg-secondary;
+            cursor: pointer;
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+            img {
+                width: 12.5rem;
+                height: 12.5rem;
+            }
+            .text {
+                padding: 0 1.25rem;
+            }
+            .details {
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+
+                span {
+                    color: $font-secondary;
+                }
+            }
+        }
+    }
+    #details {
+        display: flex;
+        justify-content: space-around;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        border-top: 2.25rem solid $bg-secondary;
+
+        &.ingredient {
+            align-items: center;
+        }
+        img {
+            width: 18.75rem;
+            height: 18.75rem;
+        }
+        #text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            > div {
+                display: flex;
+                justify-content: space-between;
+                gap: 0.5rem;
+            }
+            span {
+                color: $font-secondary;
+            }
+            ul {
+                margin: 0;
+                text-align: right;
+
+                li {
+                    padding-bottom: 0.5rem;
+                }
+            }
+            #instr {
+                flex-direction: column;
+                padding-top: 1.25rem;
+            }
+        }
+    }
+    #description {
+        padding: 1.5rem;
+    }
+    #drinks {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        img {
+            width: 12.5rem;
+            height: 12.5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        min-width: 320px;
+    }
+    #filter span {
+        display: block;
+    }
+    #results .drink {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 2rem;
+
+        .details {
+            align-items: center;
+            text-align: center;
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+    #details {
+        flex-wrap: wrap;
+    }
+}

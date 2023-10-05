@@ -1,0 +1,147 @@
+body {
+  background-color: #000;
+  color: #FFF;
+}
+
+a {
+  color: #FF7D7D;
+  text-underline-offset: 0.25rem;
+}
+
+h1, h2 {
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}
+
+#content {
+  max-width: 40rem;
+  min-height: 100%;
+  margin: auto;
+  border: 1px dashed #FFF;
+  text-align: center;
+}
+#content > div {
+  padding: 1.5rem 0;
+}
+#content #search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  background-color: #333;
+}
+#content #search #search-text {
+  outline: 0;
+  background-color: unset;
+  border: unset;
+  border-bottom: 2px solid #FFF;
+  color: #FFF;
+}
+#content #search img {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+#content #results .drink {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #333;
+  cursor: pointer;
+}
+#content #results .drink:nth-child(even) {
+  flex-direction: row-reverse;
+}
+#content #results .drink img {
+  width: 12.5rem;
+  height: 12.5rem;
+}
+#content #results .drink .text {
+  padding: 0 1.25rem;
+}
+#content #results .drink .details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+#content #results .drink .details span {
+  color: #FF7D7D;
+}
+#content #details {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-top: 2.25rem solid #333;
+}
+#content #details.ingredient {
+  align-items: center;
+}
+#content #details img {
+  width: 18.75rem;
+  height: 18.75rem;
+}
+#content #details #text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#content #details #text > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+#content #details #text span {
+  color: #FF7D7D;
+}
+#content #details #text ul {
+  margin: 0;
+  text-align: right;
+}
+#content #details #text ul li {
+  padding-bottom: 0.5rem;
+}
+#content #details #text #instr {
+  flex-direction: column;
+  padding-top: 1.25rem;
+}
+#content #description {
+  padding: 1.5rem;
+}
+#content #drinks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+#content #drinks img {
+  width: 12.5rem;
+  height: 12.5rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    min-width: 320px;
+  }
+  #filter span {
+    display: block;
+  }
+  #results .drink {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+  }
+  #results .drink .details {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 640px) {
+  #details {
+    flex-wrap: wrap;
+  }
+}/*# sourceMappingURL=sass.css.map */

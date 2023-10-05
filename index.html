@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>VRAT's Drinks</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="./assets/js/drinks.js"></script>
+        <link type="text/css" rel="stylesheet" href="./assets/css/sass.css">
+    </head>
+    <body>
+        <div id="content">
+            <div id="header"><h1>Drinks</h1></div>
+            <div id="search">
+                <!-- this search field is for easy search input, but the param that we will actually be using for the API are those in the filters section -->
+                <span><input id="search-text" type="text" placeholder="Search" value="margarita" /></span>
+                <span><img id="search-btn" src="./assets/icons/search.svg" alt="Search" /></span>
+                <span><img id="filter-btn" src="./assets/icons/filter.svg" alt="Filter" /></span>
+            </div>
+            <div id="filter" class="hidden">
+                <!-- since filters cannot be mixed with other filters (AND/OR), let's ask the user for a single filter type -->
+                <span><label>Filter By: </label></span>
+                <span>
+                    <select id="filter-type">
+                        <option value="alcoholic">Alcohol Content</option>
+                        <option value="category">Category</option>
+                        <option value="glass">Glass</option>
+                        <option value="ingredient">Ingredient</option>
+                        <option value="name" selected>Name</option>
+                    </select>
+                </span>
+                <span>
+                    <!-- all of the dropdown fields' options will be populated from the API -->
+                    <select id="alcoholic" class="filter-value hidden">
+                        <option value="">Please select</option>
+                    </select>
+                    <select id="category" class="filter-value hidden">
+                        <option value="">Please select</option>
+                    </select>
+                    <select id="glass" class="filter-value hidden">
+                        <option value="">Please select</option>
+                    </select>
+                    <select id="ingredient" class="filter-value hidden">
+                        <option value="">Please select</option>
+                    </select>
+
+                    <!-- this will be a copy of the #search-text field and vice-versa -->
+                    <input id="name" class="filter-value" type="text" placeholder="Name" value="margarita" />
+                </span>
+            </div>
+            <div id="results"></div>
+            <div id="spinner"><img src="./assets/icons/spinner.svg" /></div>
+            <div>VRAT.ENGR</div>
+        </div>
+
+        <!-- this will serve as the template for each drink entry -->
+        <div id="drink-template" class="hidden">
+            <div id="drink-0" class="drink" data-id="">
+                <div class="image"><img src=""/></div>
+                <div class="text">
+                    <h2 class="name"></h2>
+                    <div class="details"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
